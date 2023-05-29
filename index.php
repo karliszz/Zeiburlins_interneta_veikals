@@ -20,7 +20,14 @@
          </ul>
       </nav>
    </header>
-   
+
+   <section class="hero">
+      <div class="hero-content">
+         <h1>Sveicināts interneta veikalā!</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+         <a href="#" class="btn">Sākt</a>
+      </div>
+   </section>
 
 </body>
 </html>
