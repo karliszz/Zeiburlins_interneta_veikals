@@ -13,9 +13,8 @@
          <ul>
             <li><a href="index.php">Home</a></li>
             <li id="active"><a href="products.php">Products</a></li>
-            <li><a href="orders.php">Orders</a></li>
-            <li><a href="users.php">Users</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="orders.php">Pasūtijumi</a></li>
+            <li><a href="logout.php">Izlogoties</a></li>
          </ul>
       </nav>
    </header>
