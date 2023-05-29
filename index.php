@@ -29,5 +29,12 @@
       </div>
    </section>
 
+   <section class="about">
+      <div class="container">
+         <h2>Par mums</h2>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu. Nunc in justo faucibus, pharetra tortor id, suscipit sem. Nam pulvinar justo magna, eu ultrices eros volutpat nec.</p>
+      </div>
+   </section>
+   
 </body>
 </html>
