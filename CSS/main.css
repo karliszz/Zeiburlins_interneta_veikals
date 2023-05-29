@@ -1,0 +1,6 @@
+/* Šī sadaļa nosaka, ka visiem elementiem jābūt ar nulles vērtībām margām, aizpildījumiem un kastes modeļiem, lai sāktu no nulles un izvairītos no pārējo stilu ietekmēm. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
