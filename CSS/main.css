@@ -10,4 +10,19 @@
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
   }
-  
+
+  /*  Šī sadaļa apraksta klasi "container", kas tiek izmantota, lai ietvertu visu lapas saturu. Tā ir centretā, izmantojot flexbox modeli, ar adaptīvu augstumu atkarībā no ievadītā satura. Tā ir 80% platumā, apaļa malu, gaiši pelēka fona krāsa (#e0e0e0) ar ēnu un novietota centrā (margin: 80px auto). */
+  .container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Pielāgo augstumu ievadītajam saturam */
+    width: 80%;
+    text-align: center;
+    border-radius: 33px;
+    background: #e0e0e0;
+    box-shadow: 16px 16px 52px #9d9d9d, -16px -16px 52px #ffffff;
+    margin: 80px auto; /* Centrē laukumu horizontāli un vertikāli */
+  }
