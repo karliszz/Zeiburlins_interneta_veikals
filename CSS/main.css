@@ -26,3 +26,18 @@
     box-shadow: 16px 16px 52px #9d9d9d, -16px -16px 52px #ffffff;
     margin: 80px auto; /* Centrē laukumu horizontāli un vertikāli */
   }
+
+  /* Šajā sadaļā ir definēts galvenes elements (header), kas ir fiksēts augšpusē. Tam ir baltā fona krāsa (#fff), 20 pikseļu iekšējais atkāpe un ēna. Aktīvās sadaļas (li#active) fona krāsa ir rozā. */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  header li#active {
+    background-color: #f8bbd0;
+  }
