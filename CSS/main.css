@@ -61,12 +61,11 @@
 
   /* Šajā sadaļā ir definēta klase "hero", kas apraksta hero sekciju ar attēlu fonā. Tam ir centrēta attēla atrašanās vieta, balti burti un 100 pikseļu augsts atstarpes bloks pa vertikāli. */
   .hero {
-    background-image: url('hero-bg.jpg');
+    background-image: url('../Atteli/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     padding: 100px 0;
     text-align: center;
-    color: #fff;
   }
   
   .hero h1 {
