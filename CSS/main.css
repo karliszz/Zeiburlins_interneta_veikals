@@ -78,7 +78,7 @@
     font-size: 20px;
     margin-bottom: 40px;
   }
-  
+
   /* Šī sadaļa attiecas uz pogu elementiem, kas ir rozā fona krāsā (#ff4c7f), ar baltu tekstu, apaļām malām, treknrakstītas un bez dekorācijām. */
   .btn {
     background-color: #ff4c7f;
@@ -87,4 +87,17 @@
     border-radius: 4px;
     text-decoration: none;
     font-weight: bold;
+  }
+  
+  /* Šī klase attiecas uz "about" sadaļu, kas ir ar baltu fonu, 40 pikseļu iekšējo atkāpi un ēnu. */
+  .about {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
