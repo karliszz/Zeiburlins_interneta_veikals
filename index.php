@@ -35,6 +35,24 @@
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu. Nunc in justo faucibus, pharetra tortor id, suscipit sem. Nam pulvinar justo magna, eu ultrices eros volutpat nec.</p>
       </div>
    </section>
-   
+
+   <section class="services">
+      <div class="container">
+         <h2>Mūsu pakalpojumi</h2>
+         <div class="service">
+            <h3>Pakalpojums 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
+         </div>
+         <div class="service">
+            <h3>Pakalpojums 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
+         </div>
+         <div class="service">
+            <h3>Pakalpojums 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
+         </div>
+      </div>
+   </section>
+
 </body>
 </html>
