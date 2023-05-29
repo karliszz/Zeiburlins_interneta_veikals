@@ -54,5 +54,19 @@
       </div>
    </section>
 
+   <section class="blog">
+      <div class="container">
+         <h2>Jaunākais ieraksts</h2>
+         <div class="blog-post">
+            <h3>Ieraksts 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
+         </div>
+         <div class="blog-post">
+            <h3>Ieraksts 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
+         </div>
+      </div>
+   </section>
+
 </body>
 </html>
