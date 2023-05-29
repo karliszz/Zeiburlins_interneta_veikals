@@ -4,3 +4,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  /* Šajā sadaļā ir definēti visi stilizācijas noteikumi, kas attiecas uz visu lapas ķermeni (body). Norādītais fonta veids ir Arial vai sans-serif, un fona krāsa ir gaiši pelēka (#f9f9f9). */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
