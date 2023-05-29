@@ -1,3 +1,11 @@
+<?php
+   session_start();
+
+   // Pārbauda vai ir aktīva sesija un vai ir saglabāts lietotājvārds
+   if(isset($_SESSION["username"])) {
+      // Sesija ir aktīva, lietotājvārds ir saglabāts
+      // Izvadīt administrācijas paneli un atbilstošo saturu
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,3 +37,11 @@
    </footer>
 </body>
 </html>
+<?php
+   } else {
+      // Sesija nav aktīva vai lietotājvārds nav saglabāts
+      // Veikt atbilstošu rīcību, piemēram, pāradresēt uz ielogošanās lapu
+      header("Location: ../login.php");
+      exit(); // Beigt skriptu izpildi
+   }
+?>
