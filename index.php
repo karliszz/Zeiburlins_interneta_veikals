@@ -8,6 +8,19 @@
    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
+<header>
+      <nav>
+         <ul>
+            <li><a href="#">Galvenā</a></li>
+            <li><a href="#">Par mums</a></li>
+            <li><a href="#">Pakalpojumi</a></li>
+            <li><a href="#">Ieraksti</a></li>
+            <li><a href="#">Kontakti</a></li>
+            <li><a href="login.php">Ielogoties</a></li>
+         </ul>
+      </nav>
+   </header>
+   
 
 </body>
 </html>
