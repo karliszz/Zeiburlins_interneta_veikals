@@ -41,3 +41,20 @@
   header li#active {
     background-color: #f8bbd0;
   }
+
+  /*  Šeit tiek definēts stils navigācijas saraksta (ul) elementam. Saraksts tiek horizontāli centretās, un katram vienumam (li) ir 20 pikseļu atstarpe pa labi. Teksta saites (a) ir melnas krāsas, treknrakstītas un bez dekorācijām. */
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
