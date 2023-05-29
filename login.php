@@ -25,7 +25,7 @@
 							while($row = mysqli_fetch_array($rezultats)){
 								if(password_verify($Parole, $row["Parole"])){
 									$_SESSION["username"] = $Lietotajvards;
-									header("location:index.php");
+									header("location:Admin/index.php");
 								}else{
 									echo "Nepareizs E-pasts vai Parole!";
 								}
