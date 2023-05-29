@@ -135,7 +135,7 @@
     font-size: 24px;
     margin-bottom: 20px;
   }
-  
+
   /* Šī klase attiecas uz katru individuālo bloga ierakstu "blog" sadaļā. Ir 20 pikseļu atstarpe apakšā. */
   .blog-post {
     margin-bottom: 20px;
@@ -146,3 +146,14 @@
     margin-bottom: 10px;
   }
   
+  /* Šajā sadaļā ir definēts kājenelements (footer), ar tumši pelēku fonu (#333), 20 pikseļu augstu atstarpi un baltu tekstu. */
+  footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
