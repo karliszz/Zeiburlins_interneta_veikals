@@ -36,7 +36,7 @@
       </div>
    </section>
 
-   <section class="services">
+   <section class="hero">
       <div class="container">
          <h2>Mūsu pakalpojumi</h2>
          <div class="service">
