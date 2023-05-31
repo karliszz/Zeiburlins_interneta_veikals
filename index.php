@@ -11,17 +11,17 @@
 <header>
       <nav>
          <ul>
-            <li><a href="#">Galvenā</a></li>
-            <li><a href="#">Par mums</a></li>
-            <li><a href="#">Pakalpojumi</a></li>
-            <li><a href="#">Ieraksti</a></li>
+            <li><a href="#main">Galvenā</a></li>
+            <li><a href="#about">Par mums</a></li>
+            <li><a href="#services">Pakalpojumi</a></li>
+            <li><a href="#blog">Ieraksti</a></li>
             <li><a href="#">Kontakti</a></li>
             <li><a href="login.php">Ielogoties</a></li>
          </ul>
       </nav>
    </header>
 
-   <section class="hero">
+   <section id=main class="hero">
       <div class="hero-content">
          <h1>Sveicināts interneta veikalā!</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
@@ -29,14 +29,14 @@
       </div>
    </section>
 
-   <section class="about">
+   <section id=about class="about">
       <div class="container">
          <h2>Par mums</h2>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu. Nunc in justo faucibus, pharetra tortor id, suscipit sem. Nam pulvinar justo magna, eu ultrices eros volutpat nec.</p>
       </div>
    </section>
 
-   <section class="hero">
+   <section id=services class="hero">
       <div class="container">
          <h2>Mūsu pakalpojumi</h2>
          <div class="service">
@@ -54,7 +54,7 @@
       </div>
    </section>
 
-   <section class="blog">
+   <section id=blog class="blog">
       <div class="container">
          <h2>Jaunākais ieraksts</h2>
          <div class="blog-post">
