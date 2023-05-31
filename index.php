@@ -59,13 +59,27 @@
          <h2>Jaunākais ieraksts</h2>
          <div class="blog-post">
             <h3>Ieraksts 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
-         </div>
-         <div class="blog-post">
-            <h3>Ieraksts 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
-         </div>
-      </div>
+            <p>
+            <?php
+            require("connection.php");
+            // Pārbauda savienojuma veiksmīgumu
+            if (!$savienojums) {
+            die("Savienojums ar datu bāzi neizdevās: " . mysqli_connect_error());
+}
+            // Izveido vaicājumu, lai iegūtu visjaunāko ierakstu no "ieraksti" tabulas
+            $sql = "SELECT * FROM ieraksti ORDER BY datums DESC LIMIT 1";
+            $result = mysqli_query($savienojums, $sql);
+
+            // Pārbauda, vai rezultāts ir iegūts
+            if (mysqli_num_rows($result) > 0) {
+            // Izvada visjaunākā ieraksta tekstu
+            $row = mysqli_fetch_assoc($result);
+            echo "<p>" . $row["teksts"] . "</p>";
+         } else {
+            echo "<p>Nav atrasts neviens ieraksts.</p>";
+}
+            ?>
+            </p>
    </section>
 
    <footer>
