@@ -19,7 +19,7 @@
    <header>
       <nav>
          <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="index.php">Galvenā lapa</a></li>
             <li><a href="products.php">Produkti</a></li>
             <li id="active"><a href="orders.php">Pasūtījumi</a></li>
             <li><a href="logout.php">Izlogoties</a></li>
