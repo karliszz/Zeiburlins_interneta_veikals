@@ -24,7 +24,6 @@
    <section id=main class="hero">
       <div class="hero-content">
          <h1>Sveicināts interneta veikalā Blossom Beauty!</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
          <a href="#" class="btn">Sākt</a>
       </div>
    </section>
@@ -58,6 +57,9 @@
                 <h2>{$row['nosaukums']}</h2>
                 <p>{$row['apraksts']}</p>
                 <h2>Cena: {$row['cena']} €</h2>
+                <form action = 'pasutijums.php' method = 'post' >
+                            <button type='submit' name='pasutit1' class='btn' value='{$row['nosaukums']}'>Izveleties
+                        </form>
             </div>
             ";
         }
@@ -124,7 +126,7 @@
             echo "<p>" . $row["teksts"] . "</p>";
          } else {
             echo "<p>Nav atrasts neviens ieraksts.</p>";
-}
+         }
             ?>
             </p>
    </section>

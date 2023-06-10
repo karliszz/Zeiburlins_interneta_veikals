@@ -208,3 +208,87 @@
   --border:.1rem solid rgba(0,0,0,.1);
   --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 }
+
+/* Pasutijumu sadaļa */
+#pasutit{
+  padding:2rem 15%;
+}
+
+#pasutit .row{
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+#pasutit .row form{
+  flex:1 1 45rem;
+  padding:2rem;
+  border:var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: .5rem;
+}
+
+#pasutit .row form .box1{
+  margin:.7rem 0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color:var(--black);
+  border-radius: .5rem;
+  border:var(--border);
+  background: #f7f7f7;
+  text-transform: none;
+  width: 49.8%;
+}
+
+#pasutit .row form .box1:focus{
+  background:var(--bg);
+}
+
+#pasutit .row form .box2{
+  margin:.7rem 0;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color:var(--black);
+  border-radius: .5rem;
+  border:var(--border);
+  background: #f7f7f7;
+  text-transform: none;
+  width: 100%;
+}
+
+#pasutit .row form .box2:focus{
+  background:var(--bg);
+}
+
+#pasutit .row form textarea{
+  height: 20rem;
+  resize: none;
+}
+
+#pasutit .row form .btn{
+  width: 100%;
+}
+
+#pasutit .row form .btn:hover{
+  background: var(--black);
+}
+
+/* pazinojumi */
+.pazinojums{
+  font-size: 2rem;
+  text-align: center;
+  margin: 5rem;
+  padding: 3rem;
+  color: white;
+  border-radius: .5rem;
+  border: var(--border);
+}
+
+.sarkans{
+  background: #a14141;
+}
+
+.zals{
+  background: #57a141;
+}
