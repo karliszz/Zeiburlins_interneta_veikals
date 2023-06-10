@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>interneta veikals</title>
+   <title>Blossom Beauty</title>
    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
 
    <section id=main class="hero">
       <div class="hero-content">
-         <h1>Sveicināts interneta veikalā!</h1>
+         <h1>Sveicināts interneta veikalā Blossom Beauty!</h1>
          <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
          <a href="#" class="btn">Sākt</a>
       </div>
@@ -32,7 +32,10 @@
    <section id=about class="about">
       <div class="container">
          <h2>Par mums</h2>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu. Nunc in justo faucibus, pharetra tortor id, suscipit sem. Nam pulvinar justo magna, eu ultrices eros volutpat nec.</p>
+         <p>Blossom Beauty ir ekskluzīvs interneta veikals, kas ir veltīts sievietēm, kuras vēlas atklāt savu skaistumu un izpaust to pilnībā. Mūsu veikals piedāvā plašu smaržu un kosmētikas sortimentu, kas iemieso eleganci un radošumu no pasaules slavenākajiem zīmoliem.</p>
+         <p>
+         Mūsu misija ir sniegt klientiem ne tikai augstas kvalitātes produktus, bet arī personisku un izsmalcinātu apkalpošanu. Mūsu virtuālie skaistumkopšanas konsultanti ir gatavi dalīties ar padomiem, izglītot un palīdzēt klientiem izvēlēties ideālus produktus, kas atspoguļo viņu individuālo stilu un vēlmju.
+         </p>
       </div>
    </section>
 
@@ -58,7 +61,7 @@
       <div class="container">
          <h2>Jaunākais ieraksts</h2>
          <div class="blog-post">
-            <h3>Ieraksts 1</h3>
+            <h3>Aktuāli</h3>
             <p>
             <?php
             require("connection.php");
@@ -84,7 +87,7 @@
 
    <footer>
       <div class="container">
-         <p>&copy; 2023 Your Company. All rights reserved.</p>
+         <p>&copy; 2023 Blossom Beauty. All rights reserved.</p>
       </div>
    </footer>
 
