@@ -20,7 +20,7 @@
          </ul>
       </nav>
    </header>
-
+   <section>
    <div id="pasutit">
    <?php
 
@@ -47,15 +47,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 if(mysqli_query($savienojums, $registret_klientu_SQL)){
                     echo "<div class='pazinojums zals'>Pasūtījuma reģistrācija ir noritējusi veiksmīgi! Kurjers ar jums sazināsies!</div>";
+                    header("Refresh:2; url=index.php");
                 }else{
                     echo "<div class='pazinojums sarkans'>Reģistrācija nav izdevusies! Kļūda sistēmā!</div>";
                 }
-
             }else{
                 echo "<div class='pazinojums sarkans'>Reģistrācija nav izdevusies! Ievades lauku problēmas!</div>";
             }
         }
-
     }else{
 
    $produkts = $_POST['pasutit1'];
@@ -82,7 +81,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 header("Refresh:2; url=index.php");
             }
     ?> 
-
+</section>
    <footer>
       <div class="container">
          <p>&copy; 2023 Blossom Beauty. All rights reserved.</p>

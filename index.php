@@ -107,7 +107,6 @@
          <h2>Jaunākais ieraksts</h2>
          <div class="blog-post">
             <h3>Aktuāli</h3>
-            <p>
             <?php
             require("connection.php");
             // Pārbauda savienojuma veiksmīgumu
@@ -127,7 +126,6 @@
             echo "<p>Nav atrasts neviens ieraksts.</p>";
          }
             ?>
-            </p>
    </section>
 
    <footer>
