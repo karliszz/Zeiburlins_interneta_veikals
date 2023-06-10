@@ -22,6 +22,19 @@
    </header>
    <div id="pasutit">
    
+   <div class="row">
+        <form method='post'>
+            <input type="text" placeholder="Vārds *" name="vards" class="box1" title="Vārds" required>
+            <input type="text" placeholder="Uzvārds *" name="uzvards" class="box1" title="Uzvārds" required>
+            <input type="epasts" placeholder="E-pasts" name="epasts" class="box1" title="E-pasts">
+            <input type="number" placeholder="Tālrunis *" name="telnr" class="box1" title="Tālrunis" required>
+            <input type="text" placeholder="Dzīvesvietas adrese *" name="adrese" class="box1" title="Dzīvesvietas adrese">
+            <input type="text" placeholder="Jūsu izvētētais produkts " name="produkta_pasutijums" class="box1" title="Jūsu izvētētais produkts " value="<?php echo $produkts; ?>" readonly>
+            <textarea placeholder="Jūsu komentārs" name="komentars" class="box2" title="Jūsu komentārs un vai piezīmes"></textarea>
+
+            <input type="submit" value="Izveidot pasūtījumu!" class="btn" name="gatavs">
+        </form>
+    </div>
 
    <footer>
       <div class="container">
