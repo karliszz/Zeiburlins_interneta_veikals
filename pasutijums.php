@@ -20,8 +20,44 @@
          </ul>
       </nav>
    </header>
+
    <div id="pasutit">
    <?php
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            
+    require("connection.php");
+
+    #Kad metode ir pielietota, tad mainīgas izvadīs norādītos datus
+    if(isset($_POST['gatavs'])){  #Ja nospiesta poga "gatavs"
+        $vards_ievade = $_POST['vards'];
+        $uzvards_ievade = $_POST['uzvards'];
+        $epasta_ievade = $_POST['epasts'];
+        $talrunis_ievade = $_POST['telnr'];
+        $dzivesvietas_ievade = $_POST['adrese'];
+        $produkta_ievade = $_POST['produkta_pasutijums'];
+        $komentara_ievade = $_POST['komentars'];
+
+        {
+            if(!empty($vards_ievade) && !empty($uzvards_ievade) && !empty($epasta_ievade) && !empty($talrunis_ievade) 
+            && !empty($dzivesvietas_ievade)){
+                $registret_klientu_SQL = "INSERT INTO klienti(vards, uzvards, epasts, telnr, adrese, produkta_pasutijums, komentars) 
+                VALUES('$vards_ievade', '$uzvards_ievade', '$epasta_ievade', '$talrunis_ievade', '$dzivesvietas_ievade', '$produkta_ievade', 
+                '$komentara_ievade')";
+
+                if(mysqli_query($savienojums, $registret_klientu_SQL)){
+                    echo "<div class='pazinojums zals'>Pasūtījuma reģistrācija ir noritējusi veiksmīgi! Kurjers ar jums sazināsies!</div>";
+                }else{
+                    echo "<div class='pazinojums sarkans'>Reģistrācija nav izdevusies! Kļūda sistēmā!</div>";
+                }
+
+            }else{
+                echo "<div class='pazinojums sarkans'>Reģistrācija nav izdevusies! Ievades lauku problēmas!</div>";
+            }
+        }
+
+    }else{
+
    $produkts = $_POST['pasutit1'];
         echo $produkts;
         ?>
@@ -38,6 +74,14 @@
             <input type="submit" value="Izveidot pasūtījumu!" class="btn" name="gatavs">
         </form>
     </div>
+
+    <?php
+            }
+        }else{
+                echo "<div class='pazinojums sarkans'>Kaut kas nogāja greizi! Atgriezies sākumlapā un mēģini vēlreiz!</div>";
+                header("Refresh:2; url=index.php");
+            }
+    ?> 
 
    <footer>
       <div class="container">
