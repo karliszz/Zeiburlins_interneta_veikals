@@ -13,6 +13,7 @@
          <ul>
             <li><a href="#main">Galvenā</a></li>
             <li><a href="#about">Par mums</a></li>
+            <li><a href="#katalogs">Katalogs</a></li>
             <li><a href="#services">Pakalpojumi</a></li>
             <li><a href="#blog">Ieraksti</a></li>
             <li><a href="login.php">Ielogoties</a></li>
@@ -37,6 +38,36 @@
          </p>
       </div>
    </section>
+
+   <section id="katalogs">
+   <h2>Katalogs</h2>
+    <div class="box-container">
+
+        <!-- PHP ATVERSANA-->
+        <?php
+            require("connection.php");
+
+            $katalogsSQL = "SELECT * FROM katalogs";
+            $atlasaProduktus = mysqli_query($savienojums, $katalogsSQL) or die ("Nekorekts vaicājums!");
+
+            if(mysqli_num_rows($atlasaProduktus) > 0){
+                while($row = mysqli_fetch_assoc($atlasaProduktus)){
+            echo "
+            <div class='box'>
+                <img src='{$row['attels']}'>
+                <h2>{$row['nosaukums']}</h2>
+                <p>{$row['apraksts']}</p>
+                <h2>Cena: {$row['cena']} €</h2>
+            </div>
+            ";
+        }
+    }else{
+        echo "Datubāzē nav neviena produkta!";
+    }
+?>
+        
+    </div>
+</section>
 
    <section id=services class="hero">
       <div class="container">
