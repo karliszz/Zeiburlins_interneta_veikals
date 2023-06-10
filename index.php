@@ -31,10 +31,10 @@
    <section id=about class="about">
       <div class="container">
          <h2>Par mums</h2>
-         <p>Blossom Beauty ir ekskluzīvs interneta veikals, kas ir veltīts sievietēm, kuras vēlas atklāt savu skaistumu un izpaust to pilnībā. Mūsu veikals piedāvā plašu smaržu un kosmētikas sortimentu, kas iemieso eleganci un radošumu no pasaules slavenākajiem zīmoliem.</p>
-         <p>
+         <h2>Blossom Beauty ir ekskluzīvs interneta veikals, kas ir veltīts sievietēm, kuras vēlas atklāt savu skaistumu un izpaust to pilnībā. Mūsu veikals piedāvā plašu smaržu un kosmētikas sortimentu, kas iemieso eleganci un radošumu no pasaules slavenākajiem zīmoliem.</h2>
+         <h2>
          Mūsu misija ir sniegt klientiem ne tikai augstas kvalitātes produktus, bet arī personisku un izsmalcinātu apkalpošanu. Mūsu virtuālie skaistumkopšanas konsultanti ir gatavi dalīties ar padomiem, izglītot un palīdzēt klientiem izvēlēties ideālus produktus, kas atspoguļo viņu individuālo stilu un vēlmju.
-         </p>
+</h2>
       </div>
    </section>
 
