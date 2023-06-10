@@ -43,16 +43,30 @@
       <div class="container">
          <h2>Mūsu pakalpojumi</h2>
          <div class="service">
-            <h3>Pakalpojums 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
-         </div>
-         <div class="service">
-            <h3>Pakalpojums 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
-         </div>
-         <div class="service">
-            <h3>Pakalpojums 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod scelerisque mi, sed euismod mauris finibus eu.</p>
+         <?php
+      require("connection.php");
+      // Pārbauda savienojuma veiksmīgumu
+      if (!$savienojums) {
+         die("Savienojums ar datu bāzi neizdevās: " . mysqli_connect_error());
+         }
+     // Izvelkam trīs dazādus tekstu ar trim dažādiem virsrakstiem no tabulas
+     $sql = "SELECT virsraksts, saturs FROM pakalpojumi ORDER BY RAND() LIMIT 3";
+     $result = mysqli_query($savienojums, $sql);
+     
+     if ($result->num_rows > 0) {
+            // Izvadam katru ierakstu ar virsrakstu un saturu
+            while ($row = $result->fetch_assoc()) {
+            $virsraksts = $row["virsraksts"];
+            $saturs = $row["saturs"];
+     
+             echo "<h2>$virsraksts</h2>";
+             echo "<p>$saturs</p>";
+             echo "<br>";
+         }
+     } else {
+         echo "Nav atrasti rezultāti.";
+     }
+         ?>
          </div>
       </div>
    </section>
