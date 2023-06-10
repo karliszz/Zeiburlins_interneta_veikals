@@ -15,7 +15,6 @@
             <li><a href="#about">Par mums</a></li>
             <li><a href="#services">Pakalpojumi</a></li>
             <li><a href="#blog">Ieraksti</a></li>
-            <li><a href="#">Kontakti</a></li>
             <li><a href="login.php">Ielogoties</a></li>
          </ul>
       </nav>
