@@ -60,8 +60,7 @@
                 <form action = 'pasutijums.php' method = 'post' >
                             <button type='submit' name='pasutit1' class='btn' value='{$row['nosaukums']}'>Izveleties
                         </form>
-            </div>
-            ";
+            </div>";
         }
     }else{
         echo "Datubāzē nav neviena produkta!";

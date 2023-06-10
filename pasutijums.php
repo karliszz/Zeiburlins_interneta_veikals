@@ -21,7 +21,10 @@
       </nav>
    </header>
    <div id="pasutit">
-   
+   <?php
+   $produkts = $_POST['pasutit1'];
+        echo $produkts;
+        ?>
    <div class="row">
         <form method='post'>
             <input type="text" placeholder="Vārds *" name="vards" class="box1" title="Vārds" required>
