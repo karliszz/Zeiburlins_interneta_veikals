@@ -96,7 +96,9 @@
         $komentars = $_POST['edit_komentars'];
         $regdatums = $_POST['edit_regdatums'];
         
-        $query = "UPDATE klienti SET vards='$vards', uzvards='$uzvards', epasts='$epasts', telnr='$telnr', adrese='$adrese', komentars='$komentars', reg_datums='$regdatums' WHERE klienta_id='$id'"; 
+        $query = "UPDATE klienti SET vards='$vards', uzvards='$uzvards',
+        epasts='$epasts', telnr='$telnr', adrese='$adrese', komentars='$komentars',
+        reg_datums='$regdatums' WHERE klienta_id='$id'"; 
         $query_run = mysqli_query($savienojums, $query);
 
         if($query_run){
