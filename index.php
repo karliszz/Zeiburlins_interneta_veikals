@@ -24,7 +24,6 @@
    <section id=main class="hero">
       <div class="hero-content">
          <h1>Sveicināts interneta veikalā Blossom Beauty!</h1>
-         <a href="#" class="btn">Sākt</a>
       </div>
    </section>
 
