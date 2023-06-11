@@ -1,48 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
- }
- 
- .form-container {
-    max-width: 300px;
-    margin: 100px auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
- }
- 
- h3 {
-    margin-top: 0;
-    color: #333;
- }
- 
- input[type="email"],
- input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
- }
- 
- input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
- }
- 
- input[type="submit"]:hover {
-    background-color: #45a049;
- }
- 
+   font-family: Arial, sans-serif;
+   background-color: #f2f2f2; /* Fona krāsa lapas elementiem */
+   margin: 0;
+   padding: 0;
+}
+
+.form-container {
+   max-width: 300px; /* Maksimālais platums formai */
+   margin: 100px auto; /* Automātiska novietošana attiecībā pret lapas malām */
+   background-color: #fff; /* Fona krāsa formas elementiem */
+   border: 1px solid #ccc; /* Formas elementu apmales biezums un krāsa */
+   padding: 20px; /* Atkāpe iekšpusē form-container */
+   text-align: center; /* Teksta centēšana iekš form-container */
+   border-radius: 5px; /* Apaļo malu izliekums */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ēna efekts */
+}
+
+h3 {
+   margin-top: 0; /* Noņem atkāpi augšpusē h3 elementam */
+   color: #333; /* Teksta krāsa */
+}
+
+input[type="email"],
+input[type="password"] {
+   width: 100%; /* Pilns platums */
+   padding: 10px; /* Iekšējā atkāpe */
+   margin-bottom: 10px; /* Atkāpe no apakšas */
+   border: 1px solid #ccc; /* Apmales biezums un krāsa */
+   border-radius: 3px; /* Apaļo malu izliekums */
+   box-sizing: border-box; /* Noteikt kastītes izmērus, iekļaujot apmales */
+}
+
+input[type="submit"] {
+   background-color: #4CAF50; /* Fona krāsa */
+   color: #fff; /* Teksta krāsa */
+   padding: 10px 20px; /* Iekšējā atkāpe */
+   border: none; /* Noņem apmales */
+   cursor: pointer; /* Poga izmaina izskatu uz roku pārlikšanas */
+   font-size: 16px; /* Teksta lielums */
+   border-radius: 3px; /* Apaļo malu izliekums */
+   transition: background-color 0.3s ease; /* Pārejas efekts */
+}
+
+input[type="submit"]:hover {
+   background-color: #45a049; /* Fona krāsa, kad kursors virs pogas */
+}

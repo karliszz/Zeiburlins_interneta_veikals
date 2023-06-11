@@ -22,7 +22,7 @@
       <nav>
          <ul>
             <li><a href="index.php">Galvenā lapa</a></li>
-            <li id="active"><a href="products.php">Products</a></li>
+            <li id="active"><a href="products.php">Produkti</a></li>
             <li><a href="orders.php">Pasūtijumi</a></li>
             <li><a href="logout.php">Izlogoties</a></li>
          </ul>
@@ -42,17 +42,21 @@
                     $attels_input = $_POST['attels'];
 
                         if(!empty($nosaukums_input ) && !empty($cena_input) && !empty($apraksts_input) && !empty($attels_input)){                    
+                            // Veic INSERT vaicājumu, lai pievienotu ierakstu tabulā "katalogs".
                             $prece_pievienot = "INSERT INTO katalogs(nosaukums, cena, apraksts, attels) VALUES('$nosaukums_input', '$cena_input', 
                             '$apraksts_input', '$attels_input')";
 
                             if(mysqli_query($savienojums, $prece_pievienot)){
+                                // Ja vaicājums izpildās veiksmīgi, parāda veiksmes paziņojumu un pāradresē uz "products.php" lapu.
                                 echo "<div class='pazinojums zals'>Preču pievienošana ir noritējusi veiksmīgi!</div>";
                                 header("Refresh: 2, url=products.php");
                             }else{
+                                // Ja vaicājums neizdodas, parāda kļūdas paziņojumu un pāradresē uz "products.php" lapu.
                                 echo "<div class='pazinojums sarkans'>Preču pievienošana nav izdevusies! Kļūda sistēmā!</div>";
                                 header("Refresh: 2, url=products.php");
                             }
                     } else {
+                        // Ja ievades lauki nav aizpildīti, parāda paziņojumu par kļūdu.
                         echo "<div class='pazinojums sarkans'>Preču pievienošana nav izdevusies! Ievades lauku kļūdas!</div>";
                     }   
                     

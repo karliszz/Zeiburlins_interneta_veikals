@@ -70,20 +70,18 @@
                             }
                         }else{
                             echo "Tabula nav datu ko attēlot!";
-                        }
-                    ?>
-                    <table>
-        </div>
-    </section>
-
-    <div>  
-        <form action='products_create.php' method='post'>
-                <button type='submit' name='create_product_btn'>
-                    <i class="fa-regular fa-square-plus"></i>
-                </button>
-        </form>                            
-    </div>
-
+                            }
+                            ?>
+                            <table>
+                            </div>
+                            </section>
+                            <div>  
+                         <form action='products_create.php' method='post'>
+                            <button type='submit' name='create_product_btn'>
+                                <i class="fa-regular fa-square-plus"></i>
+                            </button>
+                        </form>                            
+                    </div>
    <footer>
       <p>&copy; 2023 Your Company. All rights reserved.</p>
    </footer>

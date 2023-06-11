@@ -44,10 +44,13 @@
                     </tr>
                     <?php 
                         require("../connection.php");
-                        $pasutijumiSQL = "SELECT * FROM pasutijumi";
+                        // SQL vaicājums, lai atlasītu visus ierakstus no "pasutijumi" tabulas.
+                        $pasutijumiSQL = "SELECT * FROM pasutijumi"; 
+                        // Izpilda vaicājumu un saglabā rezultātu mainīgajā "$read_pasutijumi". Ja vaicājums neizdodas, tiek pārtraukts skripts un parādās kļūdas ziņojums.
                         $read_pasutijumi = mysqli_query($savienojums, $pasutijumiSQL) or die ("Nepareizs pieprasījums!"); 
 
                         if(mysqli_num_rows($read_pasutijumi) >0){
+                            // Pārbauda, vai vaicājums atgriež vismaz vienu ierakstu.
                             while($row = mysqli_fetch_assoc($read_pasutijumi)){
                                 echo "
                                     <tr>

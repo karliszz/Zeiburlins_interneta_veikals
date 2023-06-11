@@ -23,7 +23,7 @@
          <ul>
             <li><a href="index.php">Galvenā lapa</a></li>
             <li><a href="products.php">Produkti</a></li>
-            <li id="active"><a href="orders.php">Pasūtijumi</a></li>
+            <li id="active"><a href="orders.php">Pasūtījumi</a></li>
             <li><a href="logout.php">Izlogoties</a></li>
          </ul>
       </nav>
@@ -32,9 +32,11 @@
     <section id="klienti_edit">
         <?php
         require("../connection.php");
+        // Pārbauda vai ir nospiesta "edit_client_btn" poga
         if (isset($_POST['edit_client_btn'])) {
             $id = $_POST['edit_id'];
             
+            // Izveido pieprasījumu, lai iegūtu klienta informāciju pēc klienta ID
             $query = "SELECT * FROM klientiinfo WHERE klienta_id='$id'";
             $query_run = mysqli_query($savienojums, $query);
 
@@ -44,6 +46,7 @@
         <div class="row">
             <form action="funkcijas.php" method='post'>
                 <input type="hidden" name="edit_id" value="<?php echo $row['klienta_id']?>">
+                <!-- Pārsūta klienta ID, lai to varētu atjaunināt -->
                 <input type="text" value="<?php echo $row['vards']?>" placeholder="Vārds *" name="edit_vards" class="box-form" title="Vārds" required>
                 <input type="text" value="<?php echo $row['uzvards']?>" placeholder="Uzvārds *" name="edit_uzvards" class="box-form" title="Uzvārds" required>
                 <input type="email" value="<?php echo $row['epasts']?>" placeholder="E-pasts *" name="edit_epasts" class="box-form" title="E-pasts" required>

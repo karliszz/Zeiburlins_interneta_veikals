@@ -28,15 +28,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
     require("connection.php");
 
-    #Kad metode ir pielietota, tad mainīgas izvadīs norādītos datus
-    if(isset($_POST['gatavs'])){  #Ja nospiesta poga "gatavs"
-        $vards_ievade = $_POST['vards'];
-        $uzvards_ievade = $_POST['uzvards'];
-        $epasta_ievade = $_POST['epasts'];
-        $talrunis_ievade = $_POST['telnr'];
-        $dzivesvietas_ievade = $_POST['adrese'];
-        $produkta_ievade = $_POST['produkta_pasutijums'];
-        $komentara_ievade = $_POST['komentars'];
+    /* Kad metode ir pielietota, tad mainīgas izvadīs norādītos datus */
+    if(isset($_POST['gatavs'])){  /* Ja nospiesta poga "gatavs" */
+        $vards_ievade = $_POST['vards']; /*  Iegūt ievadīto vārdu */
+        $uzvards_ievade = $_POST['uzvards']; /* Iegūt ievadīto uzvārdu */
+        $epasta_ievade = $_POST['epasts'];/* Iegūt ievadīto e-pastu */
+        $talrunis_ievade = $_POST['telnr']; /* Iegūt ievadīto tālruņa  */
+        $dzivesvietas_ievade = $_POST['adrese']; /*  Iegūt ievadīto dzīvesvietu */
+        $produkta_ievade = $_POST['produkta_pasutijums']; /* Iegūt ievadīto produkta pasūtījumu */
+        $komentara_ievade = $_POST['komentars']; /* Iegūt ievadīto komentāru */
 
         {
             if(!empty($vards_ievade) && !empty($uzvards_ievade) && !empty($epasta_ievade) && !empty($talrunis_ievade) 
@@ -44,6 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 $registret_klientu_SQL = "INSERT INTO klienti(vards, uzvards, epasts, telnr, adrese, produkta_pasutijums, komentars) 
                 VALUES('$vards_ievade', '$uzvards_ievade', '$epasta_ievade', '$talrunis_ievade', '$dzivesvietas_ievade', '$produkta_ievade', 
                 '$komentara_ievade')";
+                /* Izveidot vaicājumu, lai ievietotu klienta datus datu bāzē */
 
                 if(mysqli_query($savienojums, $registret_klientu_SQL)){
                     echo "<div class='pazinojums zals'>Pasūtījuma reģistrācija ir noritējusi veiksmīgi! Kurjers ar jums sazināsies!</div>";

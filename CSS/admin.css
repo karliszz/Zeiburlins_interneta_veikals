@@ -37,7 +37,16 @@
   }
   header li#active {
     background-color: #f8bbd0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
   }
+  
+  header li#active:hover {
+    background-color: #ffc0cb;
+  }
+  
   
   nav ul {
     list-style-type: none;

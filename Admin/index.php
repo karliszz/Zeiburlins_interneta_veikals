@@ -33,8 +33,10 @@
                 <span>
                     <?php 
                         require("../connection.php");
+                        // Izveido pieprasījumu, lai iegūtu precu skaitu no datubāzes tabulas "precusk"
                         $statSQL = "SELECT * FROM precusk";
                         $readstat = mysqli_query($savienojums, $statSQL) or die ("Nepareizs pieprasījums!"); 
+                        // Izvada katru iegūto ierakstu, attēlojot "Precu_sk" lauku
                         while($row = mysqli_fetch_assoc($readstat)){ 
                             echo "{$row['Precu_sk']}"; 
                         }
@@ -46,7 +48,9 @@
                 <span>
                     <?php 
                         $statSQL = "SELECT * FROM pasutijumusk24h";
+                        // Izveido pieprasījumu, lai iegūtu informāciju par pasūtījumu skaitu no datubāzes tabulas "pasutijumusk24h"
                         $readstat = mysqli_query($savienojums, $statSQL) or die ("Nepareizs pieprasījums!"); 
+                        // Izvada katru iegūto ierakstu, attēlojot "Pasutijumu_skaits" lauku
                         while($row = mysqli_fetch_assoc($readstat)){ 
                             echo "{$row['Pasutijumu_skaits']}"; 
                         }

@@ -22,7 +22,7 @@
       <nav>
          <ul>
             <li><a href="index.php">Galvenā lapa</a></li>
-            <li id="active"><a href="products.php">Products</a></li>
+            <li id="active"><a href="products.php">Produkti</a></li>
             <li><a href="orders.php">Pasūtijumi</a></li>
             <li><a href="logout.php">Izlogoties</a></li>
          </ul>
@@ -34,11 +34,13 @@
         <?php
         require("../connection.php");
         if (isset($_POST['edit_product_btn'])) {
+            // Pārbauda, vai forma ir nosūtīta, un vai ir nospiesta pogas elements ar nosaukumu "edit_product_btn".
             $id = $_POST['edit_id'];
-            
+            // Iegūst "edit_id" vērtību no POST datiem un saglabā to mainīgajā "id".
             $query = "SELECT * FROM precesinfo WHERE id='$id'";
+            // Izveido vaicājumu, lai iegūtu ierakstu no tabulas "precesinfo" ar konkrēto id vērtību.
             $query_run = mysqli_query($savienojums, $query);
-            
+            // Izpilda vaicājumu, izmantojot datu bāzes savienojumu "savienojums" un saglabā rezultātu mainīgajā "query_run".
             foreach($query_run as $row){
                 ?>
       <div>

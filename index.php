@@ -42,15 +42,19 @@
    <h2>Katalogs</h2>
     <div class="box-container">
 
-        <!-- PHP ATVERSANA-->
+
         <?php
             require("connection.php");
 
+            /* Tiek definēts SQL vaicājums, lai atlasītu visus produktus no "katalogs" tabulas. */
             $katalogsSQL = "SELECT * FROM katalogs";
             $atlasaProduktus = mysqli_query($savienojums, $katalogsSQL) or die ("Nekorekts vaicājums!");
 
+            /* Pārbauda, vai atgriezto rezultātu skaits ir lielāks par 0. */
             if(mysqli_num_rows($atlasaProduktus) > 0){
+               /* Ja ir produkti datubāzē, tiek izveidots cikls, kas pārstrādā katru ierakstu. */
                 while($row = mysqli_fetch_assoc($atlasaProduktus)){
+                  /* Tiek izvadīts HTML kods ar produktu informāciju. Attēls, nosaukums, apraksts un cena tiek iegūti no datubāzes. */
             echo "
             <div class='box'>
                 <img src='{$row['attels']}'>
@@ -63,6 +67,7 @@
             </div>";
         }
     }else{
+      /* Ja datubāzē nav neviena produkta, tiek izvadīts paziņojums. */
         echo "Datubāzē nav neviena produkta!";
     }
 ?>

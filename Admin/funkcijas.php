@@ -33,6 +33,7 @@
 
 <?php
     require("../connection.php");
+    // Izdzēst produkta ierakstu
     if(isset($_POST['delete_product_btn'])){
         $id = $_POST['delete_id'];
 
@@ -48,6 +49,7 @@
         }
     }
 
+    // Rediģēt produkta ierakstu
     if(isset($_POST['edit_product'])){ 
         $id = $_POST['edit_id'];
         $nosaukums = $_POST['edit_nosaukums'];
@@ -67,6 +69,7 @@
         }
     }
 
+    // Izdzēst pasūtījuma ierakstu
     if(isset($_POST['delete_order_btn'])){
         $id = $_POST['delete_id'];
 
@@ -82,6 +85,7 @@
         }
     }
 
+    // Rediģēt klienta ierakstu
     if(isset($_POST['edit_client'])){ 
         $id = $_POST['edit_id'];
         $vards = $_POST['edit_vards'];
