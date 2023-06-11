@@ -39,6 +39,7 @@
                         <th>Telefona Nr.</th>
                         <th>Adrese</th>
                         <th>Pasūtītajs produkts</th>
+                        <th>Pasūtītāja komentārs</th>
                         <th>Reģistrācijas datums</th>
                     </tr>
                     <?php 
@@ -56,7 +57,16 @@
                                         <td>{$row['telnr']}</td>
                                         <td>{$row['adrese']}</td>
                                         <td>{$row['produkta_pasutijums']}</td>
+                                        <td>{$row['komentars']}</td>
                                         <td>{$row['reg_datums']}</td>
+                                        <td>
+                                        <form action='clients_edit.php' method='post'>
+                                        <input type='hidden' name='edit_id' value='{$row['klienta_id']}'>
+                                            <button type='submit' name='edit_client_btn'>
+                                                <i class='fa fa-pencil'></i>
+                                            </button>
+                                        </form>              
+                                        </td>
                                         <td>
                                         <form action='funkcijas.php' method='post'>
                                         <input type='hidden' name='delete_id' value='{$row['klienta_id']}'>
