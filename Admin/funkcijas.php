@@ -40,10 +40,10 @@
         $check_query = mysqli_query($savienojums, $query) or die ("Nepareizs pieprasījums!"); 
 
         if($check_query){
-            echo "<div class='notif suc'>Ieraksta dzēšana ir noritējusi veiksmīgi!</div>";
+            echo "<div class='pazinojums zals'>Ieraksta dzēšana ir noritējusi veiksmīgi!</div>";
             header("Refresh: 2, url=products.php");
         }else{
-            echo "<div class='notif unsuc'>Kaut kas nogāja greizi!</div>";
+            echo "<div class='pazinojums sarkans'>Kaut kas nogāja greizi!</div>";
             header("Refresh: 2, url=products.php");
         }
     }
@@ -59,10 +59,10 @@
         $query_run = mysqli_query($savienojums, $query);
 
         if($query_run){
-            echo "<div class='notif suc'>Ieraksta rediģēšana ir noritējusi veiksmīgi!</div>";
+            echo "<div class='pazinojums zals'>Ieraksta rediģēšana ir noritējusi veiksmīgi!</div>";
             header("Refresh: 2, url=products.php");
         }else{
-            echo "<div class='notif unsuc'>Kaut kas nogāja greizi!</div>";
+            echo "<div class='pazinojums sarkans'>Kaut kas nogāja greizi!</div>";
             header("Refresh: 2, url=products.php");
         }
     }
@@ -74,10 +74,10 @@
         $check_query = mysqli_query($savienojums, $query) or die ("Nepareizs pieprasījums!"); 
 
         if($check_query){
-            echo "<div class='notif suc'>Ieraksta dzēšana ir noritējusi veiksmīgi!</div>";
+            echo "<div class='pazinojums zals'>Ieraksta dzēšana ir noritējusi veiksmīgi!</div>";
             header("Refresh: 2, url=orders.php");
         }else{
-            echo "<div class='notif unsuc'>Kaut kas nogāja greizi!</div>";
+            echo "<div class='pazinojums sarkans'>Kaut kas nogāja greizi!</div>";
             header("Refresh: 2, url=orders.php");
         }
     }
@@ -96,10 +96,10 @@
         $query_run = mysqli_query($savienojums, $query);
 
         if($query_run){
-            echo "<div class='notif suc'>Ieraksta rediģēšana ir noritējusi veiksmīgi!</div>";
+            echo "<div class='pazinojums zals'>Ieraksta rediģēšana ir noritējusi veiksmīgi!</div>";
             header("Refresh: 2, url=orders.php");
         }else{
-            echo "<div class='notif unsuc'>Kaut kas nogāja greizi!</div>";
+            echo "<div class='pazinojums sarkans'>Kaut kas nogāja greizi!</div>";
             header("Refresh: 2, url=orders.php");
         }
     }

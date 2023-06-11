@@ -46,14 +46,14 @@
                             '$apraksts_input', '$attels_input')";
 
                             if(mysqli_query($savienojums, $prece_pievienot)){
-                                echo "<div class='notif suc'>Preču pievienošana ir noritējusi veiksmīgi!</div>";
+                                echo "<div class='pazinojums zals'>Preču pievienošana ir noritējusi veiksmīgi!</div>";
                                 header("Refresh: 2, url=products.php");
                             }else{
-                                echo "<div class='notif unsuc'>Preču pievienošana nav izdevusies! Kļūda sistēmā!</div>";
+                                echo "<div class='pazinojums sarkans'>Preču pievienošana nav izdevusies! Kļūda sistēmā!</div>";
                                 header("Refresh: 2, url=products.php");
                             }
                     } else {
-                        echo "<div class='notif unsuc'>Preču pievienošana nav izdevusies! Ievades lauku kļūdas!</div>";
+                        echo "<div class='pazinojums sarkans'>Preču pievienošana nav izdevusies! Ievades lauku kļūdas!</div>";
                     }   
                     
 
@@ -73,7 +73,7 @@
         <?php
                 }   
             }else{
-                    echo "<div class='notif unsuc'>Kaut kas nogāja greizi! Atgriezies sākumlapā un mēģini vēlreiz!</div>";
+                    echo "<div class='pazinojums sarkans'>Kaut kas nogāja greizi! Atgriezies sākumlapā un mēģini vēlreiz!</div>";
                     header("Refresh:2; url=products.php");
                 }
         ?>

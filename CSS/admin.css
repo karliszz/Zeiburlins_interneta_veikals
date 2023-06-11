@@ -298,3 +298,21 @@
     background-color: #a01973;
   }
   
+  /* pazinojumu stili */
+.pazinojums{
+  font-size: 2rem;
+  text-align: center;
+  margin: 5rem;
+  padding: 3rem;
+  color: white;
+  border-radius: .5rem;
+  border: var(--border);
+}
+
+.sarkans{
+  background: #a14141;
+}
+
+.zals{
+  background: #57a141;
+}
