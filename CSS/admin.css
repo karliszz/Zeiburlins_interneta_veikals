@@ -316,3 +316,99 @@
 .zals{
   background: #57a141;
 }
+
+/* pasutijumu sadalas stils */
+#pasutijumu-attelosana {
+  padding: 20px;
+}
+
+#pasutijumu-attelosana .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#pasutijumu-attelosana .pasutijumu-info {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#pasutijumu-attelosana table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#pasutijumu-attelosana th,
+#pasutijumu-attelosana td {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+#pasutijumu-attelosana th {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+#pasutijumu-attelosana tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+#pasutijumu-attelosana tr:hover {
+  background-color: #eaeaea;
+}
+
+#pasutijumu-attelosana button {
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#pasutijumu-attelosana button:hover {
+  color: #008cba;
+}
+
+#pasutijumu-attelosana .fa {
+  font-size: 16px;
+}
+
+#pasutijumu-attelosana form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#pasutijumu-attelosana form input[type="text"],
+#pasutijumu-attelosana form input[type="submit"],
+#pasutijumu-attelosana form .cancel-btn {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+#pasutijumu-attelosana form input[type="submit"],
+#pasutijumu-attelosana form .cancel-btn {
+  background-color: #d62099;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#pasutijumu-attelosana form .cancel-btn {
+  text-decoration: none;
+}
+
+#pasutijumu-attelosana form input[type="submit"]:hover,
+#pasutijumu-attelosana form .cancel-btn:hover {
+  background-color: #a01973;
+}
+
