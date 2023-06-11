@@ -27,9 +27,35 @@
       </nav>
    </header>
 
-   <div class="container">
-      Sveicināts admin sadaļā!
-   </div>
+   <section id="admin-stat">
+        <div class="statistics">
+            <div class="info">
+                <span>
+                    <?php 
+                        require("../connection.php");
+                        $statSQL = "SELECT * FROM precusk";
+                        $readstat = mysqli_query($savienojums, $statSQL) or die ("Nepareizs pieprasījums!"); 
+                        while($row = mysqli_fetch_assoc($readstat)){ 
+                            echo "{$row['Precu_sk']}"; 
+                        }
+                    ?>
+                </span>
+                <h3>Preču skaits</h3>
+            </div>
+            <div class="info">
+                <span>
+                    <?php 
+                        $statSQL = "SELECT * FROM pasutijumusk24h";
+                        $readstat = mysqli_query($savienojums, $statSQL) or die ("Nepareizs pieprasījums!"); 
+                        while($row = mysqli_fetch_assoc($readstat)){ 
+                            echo "{$row['Pasutijumu_skaits']}"; 
+                        }
+                    ?>
+                </span>
+                <h3>Pasūtījumu skaits pēdējās 24 stundās</h3>
+            </div>     
+        </div>
+    </section>
 
    <footer>
       <p>&copy; 2023 Your Company. All rights reserved.</p>
