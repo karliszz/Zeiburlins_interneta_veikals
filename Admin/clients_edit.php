@@ -22,7 +22,7 @@
       <nav>
          <ul>
             <li><a href="index.php">Galvenā lapa</a></li>
-            <li><a href="products.php">Products</a></li>
+            <li><a href="products.php">Produkti</a></li>
             <li id="active"><a href="orders.php">Pasūtijumi</a></li>
             <li><a href="logout.php">Izlogoties</a></li>
          </ul>
@@ -52,10 +52,10 @@
                 <input type="text" value="<?php echo $row['komentars']?>" placeholder="Komentārs *" name="edit_komentars" class="box-form" title="Komentārs">
                 <input type="text" value="<?php echo $row['reg_datums']?>" placeholder="Reģistrācijas datums *" name="edit_regdatums" class="box-form" title="Reģistrācijas datums" readonly>
                 <input type="submit" value="Rediģēt klientu!" class="edit-btn" name="edit_client">
-                <a href="products.php" class="cancel-btn">Atcelt!</a>
+                <a href="orders.php" class="cancel-btn">Atcelt!</a>
             </form>         
         </div>
-        
+        </section>
         <?php
             }
         }
