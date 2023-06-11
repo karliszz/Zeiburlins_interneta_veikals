@@ -50,6 +50,14 @@
                                         <td>{$row['cena']}</td>
                                         <td>{$row['apraksts']}</td>
                                         <td>
+                                        <form action='products_edit.php' method='post'>
+                                        <input type='hidden' name='edit_id' value='{$row['id']}'>
+                                            <button type='submit' name='edit_product_btn'>
+                                                <i class='fa fa-pencil'></i>
+                                            </button>
+                                        </form>              
+                                        </td>
+                                        <td>
                                         <form action='funkcijas.php' method='post'>
                                         <input type='hidden' name='delete_id' value='{$row['id']}'>
                                             <button type='submit' name='delete_product_btn'>
@@ -67,6 +75,14 @@
                     <table>
         </div>
     </section>
+
+    <div>  
+        <form action='products_create.php' method='post'>
+                <button type='submit' name='create_product_btn'>
+                    <i class="fa-regular fa-square-plus"></i>
+                </button>
+        </form>                            
+    </div>
 
    <footer>
       <p>&copy; 2023 Your Company. All rights reserved.</p>
