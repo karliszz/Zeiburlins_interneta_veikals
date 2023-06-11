@@ -14,6 +14,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Admin Panel</title>
    <link rel="stylesheet" href="../CSS/admin.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
    <header>
@@ -27,10 +28,53 @@
       </nav>
    </header>
 
-   <div class="container">
-      <h1>Pasūtījumi </h1>
-      <!-- Šeit bus funkcija kura uzradīs visus pasutijumus -->
-   </div>
+   <section id="pasutijumu-attelosana">
+        <div class="row">
+            <div class="pasutijumu-info">
+                    <table>
+                    <tr>
+                        <th>Vārds</th>
+                        <th>Uzvārds</th>
+                        <th>E-pasts</th>
+                        <th>Telefona Nr.</th>
+                        <th>Adrese</th>
+                        <th>Pasūtītajs produkts</th>
+                        <th>Reģistrācijas datums</th>
+                    </tr>
+                    <?php 
+                        require("../connection.php");
+                        $pasutijumiSQL = "SELECT * FROM pasutijumi";
+                        $read_pasutijumi = mysqli_query($savienojums, $pasutijumiSQL) or die ("Nepareizs pieprasījums!"); 
+
+                        if(mysqli_num_rows($read_pasutijumi) >0){
+                            while($row = mysqli_fetch_assoc($read_pasutijumi)){
+                                echo "
+                                    <tr>
+                                        <td>{$row['vards']}</td>
+                                        <td>{$row['uzvards']}</td>
+                                        <td>{$row['epasts']}</td>
+                                        <td>{$row['telnr']}</td>
+                                        <td>{$row['adrese']}</td>
+                                        <td>{$row['produkta_pasutijums']}</td>
+                                        <td>{$row['reg_datums']}</td>
+                                        <td>
+                                        <form action='funkcijas.php' method='post'>
+                                        <input type='hidden' name='delete_id' value='{$row['klienta_id']}'>
+                                            <button type='submit' name='delete_order_btn'>
+                                            <i class='fa fa-trash'></i>
+                                            </button>
+                                        </form>         
+                                    </td>   
+                                    </tr>
+                                ";
+                            }
+                        }else{
+                            echo "Tabula nav datu ko attēlot!";
+                        }
+                    ?>
+                    <table>
+        </div>
+    </section>
 
    <footer>
       <p>&copy; 2023 Your Company. All rights reserved.</p>

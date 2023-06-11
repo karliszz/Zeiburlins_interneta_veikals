@@ -14,6 +14,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Admin Panel</title>
    <link rel="stylesheet" href="../CSS/admin.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
    <header>
@@ -27,10 +28,45 @@
       </nav>
    </header>
 
-   <div class="container">
-      <h1>Produkti</h1>
-      <!-- Šeit bus funkcija kura uzradīs visus produktus -->
-   </div>
+   <section id="preces-attelosana">
+        <div class="row">
+            <div class="preces-info">
+                    <table>
+                    <tr>
+                        <th>Preces nosaukums</th>
+                        <th>Preces cena</th>
+                        <th>Preces apraksts</th>
+                    </tr>
+                    <?php 
+                        require("../connection.php");
+                        $precesSQL = "SELECT * FROM preces";
+                        $read_preces = mysqli_query($savienojums, $precesSQL) or die ("Nepareizs pieprasījums!"); 
+
+                        if(mysqli_num_rows($read_preces) >0){
+                            while($row = mysqli_fetch_assoc($read_preces)){
+                                echo "
+                                    <tr>
+                                        <td>{$row['nosaukums']}</td>
+                                        <td>{$row['cena']}</td>
+                                        <td>{$row['apraksts']}</td>
+                                        <td>
+                                        <form action='funkcijas.php' method='post'>
+                                        <input type='hidden' name='delete_id' value='{$row['id']}'>
+                                            <button type='submit' name='delete_product_btn'>
+                                            <i class='fa fa-trash'></i>
+                                            </button>
+                                        </form>         
+                                    </td>    
+                                    </tr>
+                                ";
+                            }
+                        }else{
+                            echo "Tabula nav datu ko attēlot!";
+                        }
+                    ?>
+                    <table>
+        </div>
+    </section>
 
    <footer>
       <p>&copy; 2023 Your Company. All rights reserved.</p>
