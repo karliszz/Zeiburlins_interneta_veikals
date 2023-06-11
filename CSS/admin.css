@@ -412,3 +412,52 @@
   background-color: #a01973;
 }
 
+/* pasutijumu redigesanas sadalas stils */
+
+#klienti_edit {
+  padding: 20px;
+}
+
+#klienti_edit .row {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#klienti_edit form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#klienti_edit input[type="text"],
+#klienti_edit input[type="email"],
+#klienti_edit input[type="submit"],
+#klienti_edit a.cancel-btn {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+#klienti_edit input[type="submit"],
+#klienti_edit a.cancel-btn {
+  background-color: #d62099;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#klienti_edit a.cancel-btn {
+  text-decoration: none;
+}
+
+#klienti_edit input[type="submit"]:hover,
+#klienti_edit a.cancel-btn:hover {
+  background-color: #a01973;
+}
