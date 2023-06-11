@@ -55,7 +55,7 @@
                 <a href="products.php" class="cancel-btn">Atcelt!</a>
             </form>         
         </div>
-        
+            </section>
         <?php
             }
         }

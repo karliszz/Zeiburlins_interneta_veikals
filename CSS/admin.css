@@ -240,3 +240,61 @@
     background-color: #a01973;
   }
   
+  /* preces edit css */
+
+  #preces_edit {
+    padding: 20px;
+  }
+  
+  #preces_edit .row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  #preces_edit .precu_attels-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #preces_edit .precu_attels {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  #preces_edit form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #preces_edit input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+  }
+  
+  #preces_edit input[type="submit"],
+  #preces_edit a.cancel-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d62099;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #preces_edit input[type="submit"]:hover,
+  #preces_edit a.cancel-btn:hover {
+    background-color: #a01973;
+  }
+  
