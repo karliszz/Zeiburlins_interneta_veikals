@@ -145,4 +145,59 @@
     font-size: 16px;
     color: #666;
   }
+  /* produktu attelosanas paneli */
+
+  #preces-attelosana {
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .preces-info {
+    width: 800px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead th {
+    background-color: #e6e6e6;
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  form {
+    display: inline-block;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button i {
+    color: #999;
+  }
+  
+  button:hover i {
+    color: #333;
+  }
   
